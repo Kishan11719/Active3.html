@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Join and Pop Example</title>
+</head>
+<body>
+    <h1>Array Join and Pop Example</h1>
+
+    <!-- Buttons to trigger JavaScript functions -->
+    <button onclick="displayArray()">Display Array</button>
+    <button onclick="popArray()">Pop and Display Array</button>
+
+    <!-- Div to display results -->
+    <div id="output"></div>
+
+    <script>
+        // Create objects
+        let person1 = { name: "Alice", age: 25 };
+        let person2 = { name: "Bob", age: 30 };
+        let person3 = { name: "Charlie", age: 35 };
+
+        // Store objects in an array (we are only storing their names for simplicity)
+        let peopleArray = [person1.name, person2.name, person3.name];
+
+        // Function to display the array using join()
+        function displayArray() {
+            document.getElementById("output").innerHTML = 
+                "Array using join: " + peopleArray.join(", ");
+        }
+
+        // Function to pop the last element from the array and display the modified array
+        function popArray() {
+            let removedPerson = peopleArray.pop();
+            document.getElementById("output").innerHTML = 
+                "Array after pop: " + peopleArray.join(", ") + "<br>" +
+                "Removed person: " + removedPerson;
+        }
+    </script>
+</body>
+</html>
